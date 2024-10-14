@@ -101,3 +101,45 @@ accordions.forEach(el => {
     });
 })
 
+// ------------------------------------------
+
+// Function to start the counter
+function startCounter(counter) {
+  const target = +counter.getAttribute('data-target'); // Get the target number from the data attribute
+  const speed = 200; // Adjust speed here
+
+  const updateCount = () => {
+      const currentCount = +counter.innerText;
+      const increment = target / speed;
+
+      if (currentCount < target) {
+          counter.innerText = Math.ceil(currentCount + increment);
+          setTimeout(updateCount, 15); // Update every 15ms
+      } else {
+          counter.innerText = target; // Set the final number
+      }
+  };
+  
+  updateCount();
+}
+
+// IntersectionObserver to detect when the section is in view
+const counters = document.querySelectorAll('.counter');
+const observerOptions = {
+  threshold: 1  // Trigger when 50% of the section is in view
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          startCounter(entry.target);
+          observer.unobserve(entry.target);  // Stop observing once the counter starts
+      }
+  });
+}, observerOptions);
+
+// Attach the observer to each counter element
+counters.forEach(counter => {
+  observer.observe(counter);
+});
+
