@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArtInnovate - Home</title>
+    <link rel="stylesheet" href="faq.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./images/artinnovate-favicon.jpg"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  </head>
+  <body>
+    <div class="main">
+      <header>
+        <!-- ------------------------------------ -->
+
+        <div class="navbar">
+          <div class="nav-left">
+            <img src="./images/artinnovate-logo-without-bg.png" alt="" />
+          </div>
+          <div class="nav-middle">
+            <ul class="nav-links">
+              <a class="hover-underline-animation" href="#"><li>Home</li></a>
+
+              <a class="hover-underline-animation" href="#"
+                ><li>Our Products</li></a
+              >
+
+              <a class="hover-underline-animation" href="#"
+                ><li>About Us</li></a
+              >
+
+              <a class="hover-underline-animation" href="#"><li>Contact</li></a>
+            </ul>
+          </div>
+          <div class="nav-right">
+            <ul class="nav-links">
+              <a href="#"
+                ><li>Sell <i class="bx bxs-right-top-arrow-circle"></i></li
+              ></a>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- ------------------------------------ -->
+
+      <div class="slider">
+        <div class="slides">
+          <!-- Slide 1 -->
+          <div class="slide">
+            <div class="slide-image">
+              <img
+                src="https://images.unsplash.com/photo-1704115676100-3905a8d51524?q=80&w=1643&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Art 1"
+              />
+            </div>
+            <div class="slide-content">
+              <h2>Discover Unique Art That Inspires</h2>
+              <p>
+                Our collection features an exquisite range of artwork, from
+                contemporary <br />
+                pieces to timeless classics. Each product is crafted with
+                passion, designed <br />
+                to inspire and elevate any space..
+              </p>
+              <a href="#" class="slide-btn btn btn1">Shop Now</a>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="slide">
+            <div class="slide-image">
+              <img
+                src="https://images.unsplash.com/photo-1704120227825-fc240e714552?q=80&w=1649&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Art 2"
+              />
+            </div>
+            <div class="slide-content">
+              <h2>
+                AI-Powered Price Prediction <br />
+                for Your Artwork
+              </h2>
+              <p>
+                Upload an image of your painting and let our advanced AI
+                estimate its market value <br />
+                instantly. Discover the worth of your artwork with precision and
+                ease.
+              </p>
+              <a href="#" class="slide-btn btn btn1">Explore Now</a>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="slide">
+            <div class="slide-image">
+              <img
+                src="https://images.unsplash.com/photo-1704115676100-3905a8d51524?q=80&w=1643&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Art 3"
+              />
+            </div>
+            <div class="slide-content">
+              <h2>Shop By Catagory</h2>
+              <p>
+                Bring life to your home or office with vibrant, original art.
+              </p>
+              <a href="#" class="slide-btn btn btn1">Browse Art</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline and Navigation -->
+        <div class="timeline">
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
+
+          <button class="prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+
+          <button class="next-btn" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+      </div>
+
+      <!-- ------------------------------------ -->
+      <!-- 
+        <div class="numbers-section">
+            <h1> Join the leading art destination in the world</h1>
+            <div class="numbers-container">
+                <div>
+                    <h2>
+                        <span>100 +</span>  <br>
+                        Products
+                    </h2>
+                </div>
+                <div>
+                    <h2>
+                        <span>100 +</span>  <br>
+                        Customers
+                    </h2>
+                </div>
+                <div>
+                    <h2>
+                        <span>10 +</span> <br>
+                        Artists
+                    </h2>
+                </div>
+            </div>
+        </div> -->
+
+      <!-- ------------------------------------ -->
+       
+      
+      <div class="featured-catagory featured-section">
+        <div class="heading-style-one">
+          <h2>Featured Products</h2>
+          <p>Explore Our Curated Collection</p>
+        </div>
+        
+        <hr />
+        
+        <img style="margin: 1rem 0;" src="./images/Screenshot (656).png" alt="">
+        
+      </div>
+
+      <!-- ------------------------------------ -->
+
+      <div class="featured-section featured-section-main">
+        <div class="heading-style-one">
+          <h2>Our Artworks</h2>
+          <p>Top pices of the week.</p>
+        </div>
+
+        <hr />
+
+        <div class="product-section">
+          <div class="product-outer-card">
+            <div class="product-card">
+              <img src="./images/product-demo-img.jpg" alt="" />
+            </div>
+
+            <div class="product-card-details">
+              <h2>Artwork Name</h2>
+              <p>Artist Name</p>
+              <p>34 X 34 Inches</p>
+              <button class="btn btn1">Buy Now</button>
+            </div>
+          </div>
+          <div class="product-outer-card">
+            <div class="product-card">
+              <img src="./images/product-demo-img-2.png" alt="" />
+            </div>
+
+            <div class="product-card-details">
+              <h2>Artwork Name</h2>
+              <p>Artist Name</p>
+              <p>34 X 34 Inches</p>
+              <button class="btn btn1">Buy Now</button>
+            </div>
+          </div>
+          <div class="product-outer-card">
+            <div class="product-card">
+              <img src="./images/product-demo-img-3.png" alt="" />
+            </div>
+
+            <div class="product-card-details">
+              <h2>Artwork Name</h2>
+              <p>Artist Name</p>
+              <p>34 X 34 Inches</p>
+              <button class="btn btn1">Buy Now</button>
+            </div>
+          </div>
+          <div class="product-outer-card">
+            <div class="product-card">
+              <img src="./images/product-demo-img-4.png" alt="" />
+            </div>
+
+            <div class="product-card-details">
+              <h2>Artwork Name</h2>
+              <p>Artist Name</p>
+              <p>34 X 34 Inches</p>
+              <button class="btn btn1">Buy Now</button>
+            </div>
+          </div>
+
+          <!-- <div class="product-card">
+                    <img src="./images/product-demo-img.jpg" alt="">
+
+                </div>
+                <div class="product-card">
+                    <img src="./images/product-demo-img.jpg" alt="">
+
+                </div> -->
+          <!-- <div class="product-card">
+                    <img src="./images/product-demo-img.jpg" alt="">
+
+                </div> -->
+        </div>
+
+        <div class="view-more-btn">
+          <button class="btn btn1">View All</button>
+        </div>
+      </div>
+
+      <!-- ------------------------------------ -->
+
+      <div class="featured-section catagory-section">
+        <div class="heading-style-one">
+          <h2>Shop By Catagory</h2>
+          <p>Browse by Style, Medium, or Theme.</p>
+        </div>
+
+        <hr />
+      
+        <!-- 
+        <div class="catagory-buttons">
+            <button class="btn btn1">Catagory one</button>
+            <button class="btn btn1">Catagory one</button>
+            <button class="btn btn1">Catagory one</button>
+            <button class="btn btn1">Catagory one</button>
+        </div> 
+        -->
+
+        <div class="catagory-buttons">
+          <a class="filter-button btn btn1" id="active" onclick="toggleVisibility('Menu1');">Catagory One</a>
+          <a class="filter-button btn btn1" onclick="toggleVisibility('Menu2');">Catagory Two</a>
+          <a class="filter-button btn btn1" onclick="toggleVisibility('Menu3');">Catagory Three</a>
+          <a class="filter-button btn btn1" onclick="toggleVisibility('Menu4');">Catagory Four</a>
+        </div>
+
+
+        <div id="Menu1">
+          <h4 class="catagory-number-heading">Catagory One</h4>
+            <div class="product-section">
+              <div class="product-outer-card">
+                <div class="product-card">
+                  <img src="./images/product-demo-img.jpg" alt="" />
+                </div>
+    
+                <div class="product-card-details">
+                  <h2>Artwork Name</h2>
+                  <p>Artist Name</p>
+                  <p>34 X 34 Inches</p>
+                  <button class="btn btn1">Buy Now</button>
+                </div>
+              </div>
+              <div class="product-outer-card">
+                <div class="product-card">
+                  <img src="./images/product-demo-img-2.png" alt="" />
+                </div>
+    
+                <div class="product-card-details">
+                  <h2>Artwork Name</h2>
+                  <p>Artist Name</p>
+                  <p>34 X 34 Inches</p>
+                  <button class="btn btn1">Buy Now</button>
+                </div>
+              </div>
+              <div class="product-outer-card">
+                <div class="product-card">
+                  <img src="./images/product-demo-img-3.png" alt="" />
+                </div>
+    
+                <div class="product-card-details">
+                  <h2>Artwork Name</h2>
+                  <p>Artist Name</p>
+                  <p>34 X 34 Inches</p>
+                  <button class="btn btn1">Buy Now</button>
+                </div>
+              </div> 
+              <div class="product-outer-card">
+                <div class="product-card">
+                  <img src="./images/product-demo-img-4.png" alt="" />
+                </div>
+    
+                <div class="product-card-details">
+                  <h2>Artwork Name</h2>
+                  <p>Artist Name</p>
+                  <p>34 X 34 Inches</p>
+                  <button class="btn btn1">Buy Now</button>
+                </div>
+              </div>
+    
+              <!-- <div class="product-card">
+                        <img src="./images/product-demo-img.jpg" alt="">
+    
+                    </div>
+                    <div class="product-card">
+                        <img src="./images/product-demo-img.jpg" alt="">
+    
+                    </div> -->
+              <!-- <div class="product-card">
+                        <img src="./images/product-demo-img.jpg" alt="">
+    
+                    </div> -->
+            </div>
+        </div>
+
+
+        <!-- ------------------------------- -->
+         
+         <div id="Menu2" style="display: none;">
+          <h4 class="catagory-number-heading">Catagory Two</h4>
+          <div class="product-section">
+            <div class="product-outer-card">
+              <div class="product-card">
+                <img src="./images/product-demo-img.jpg" alt="" />
+              </div>
+  
+              <div class="product-card-details">
+                <h2>Artwork Name</h2>
+                <p>Artist Name</p>
+                <p>34 X 34 Inches</p>
+                <button class="btn btn1">Buy Now</button>
+              </div>
+            </div>
+            <div class="product-outer-card">
+              <div class="product-card">
+                <img src="./images/product-demo-img-2.png" alt="" />
+              </div>
+  
+              <div class="product-card-details">
+                <h2>Artwork Name</h2>
+                <p>Artist Name</p>
+                <p>34 X 34 Inches</p>
+                <button class="btn btn1">Buy Now</button>
+              </div>
+            </div>
+          </div>
+         </div>
+
+
+         <div id="Menu3" style="display: none;">
+          <h4 class="catagory-number-heading">Catagory Three</h4>
+          <div class="product-section">
+            
+            <div class="product-outer-card">
+              <div class="product-card">
+                <img src="./images/product-demo-img-2.png" alt="" />
+              </div>
+  
+              <div class="product-card-details">
+                <h2>Artwork Name</h2>
+                <p>Artist Name</p>
+                <p>34 X 34 Inches</p>
+                <button class="btn btn1">Buy Now</button>
+              </div>
+            </div>
+            <div class="product-outer-card">
+              <div class="product-card">
+                <img src="./images/product-demo-img-3.png" alt="" />
+              </div>
+  
+              <div class="product-card-details">
+                <h2>Artwork Name</h2>
+                <p>Artist Name</p>
+                <p>34 X 34 Inches</p>
+                <button class="btn btn1">Buy Now</button>
+              </div>
+            </div>
+            <div class="product-outer-card">
+              <div class="product-card">
+                <img src="./images/product-demo-img-4.png" alt="" />
+              </div>
+  
+              <div class="product-card-details">
+                <h2>Artwork Name</h2>
+                <p>Artist Name</p>
+                <p>34 X 34 Inches</p>
+                <button class="btn btn1">Buy Now</button>
+              </div>
+            </div>
+           </div>
+         </div>
+
+
+         <div id="Menu4" style="display: none;">
+          <h4 class="catagory-number-heading">Catagory Four</h4>
+          <div class="product-section">
+            
+            <div class="product-outer-card">
+              <div class="product-card">
+                <img src="./images/product-demo-img-2.png" alt="" />
+              </div>
+  
+              <div class="product-card-details">
+                <h2>Artwork Name</h2>
+                <p>Artist Name</p>
+                <p>34 X 34 Inches</p>
+                <button class="btn btn1">Buy Now</button>
+              </div>
+            </div>
+           </div> 
+         </div>
+
+
+
+        <div class="view-more-btn">
+          <button class="btn btn1">View All</button>
+        </div>
+      </div>
+
+
+      <!-- ------------------------------------ -->
+
+      <!-- <div class="featured-catagory featured-section">
+        <div class="heading-style-one">
+          <h2>Featured Products</h2>
+          <p>Browse by Style, Medium, or Theme.</p>
+        </div>
+
+        <hr />
+
+        <div class="featured-container">
+            <div class="featured-product-img">
+                <img src="./images/product-demo-img-2.png" alt="">
+            </div>
+            <div class="featured-product-details">
+              <h1>Artist Name</h1>
+              
+            </div>
+        </div>
+
+      </div> -->
+
+      <!-- ------------------------------------ -->
+
+      <div class="featured-catagory featured-section">
+        <div class="heading-style-one">
+          <h2>Testimonials.</h2>
+          <p>What Our Art Lovers Are Saying.</p>
+        </div>
+
+        <hr />
+
+        <div class="testimonial-scroll">
+            <div>
+              <img src="./images/testimonial-card-d1.jpg" alt="">
+            </div>
+            <div>
+              <img src="./images/testimonial-card-d1.jpg" alt="">
+            </div>
+            <div>
+              <img src="./images/testimonial-card-d1.jpg" alt="">
+            </div>
+            <div>
+              <img src="./images/testimonial-card-d1.jpg" alt="">
+            </div>
+            <div>
+              <img src="./images/testimonial-card-d1.jpg" alt="">
+            </div>
+        </div>
+          
+
+      </div>
+
+      <!-- ------------------------------------ -->
+       
+      <div class="featured-catagory featured-section">
+        <div class="heading-style-one">
+          <h2>Our Achievements.</h2>
+          <p>Browse by Style, Medium, or Theme.</p>
+        </div>
+
+        <hr />
+
+                
+        
+
+      </div>
+
+      <!-- ------------------------------------ -->
+
+      <div class="featured-catagory featured-section faq-section">
+        <div class="heading-style-one">
+          <h2>Faq's.</h2>
+          <p>Browse by Style, Medium, or Theme.</p>
+        </div>
+
+        <hr />
+
+        <section class="process">
+          <div class="process__container">
+            <div class="process__accordions">
+              <ul class="accordions__list">
+                <li class="accordions__item">
+                  <button class="accordions__control" aria-expanded="false">
+                    <span class="accordions__number">01</span>
+                    <span class="accordions__title">Question One</span>
+                    <span class="accordions__icon"></span>
+                  </button>
+                  <div class="accordions__content text" aria-hidden="true">
+                    <p>During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.</p>
+                  </div>
+                </li>
+                <li class="accordions__item">
+                  <button class="accordions__control" aria-expanded="false">
+                    <span class="accordions__number">02</span>
+                    <span class="accordions__title">Question Two</span>
+                    <span class="accordions__icon"></span>
+                  </button>
+                  <div class="accordions__content text" aria-hidden="true">
+                    <p>In today's marketplace, R&D strategy helps a business take a leading position and keeps it competitive, agile, adaptable, and profitable. The research and development concept is one of the earliest stages in creating a business strategy, but the commercial success of the entire project depends on its successful introduction.</p>
+                  </div>
+                </li>
+                <li class="accordions__item">
+                     <button class="accordions__control" aria-expanded="false">
+                         <span class="accordions__number">03</span>
+                         <span class="accordions__title">Question Three</span>
+                         <span class="accordions__icon"></span>
+                     </button>
+                     <div class="accordions__content text" aria-hidden="true">
+                       <p>Strategy implementation is the process of turning your strategic plan into action. Whether you're executing a new marketing plan to increase sales or introducing a new work management software to increase efficiency—your plan is only as valuable as the implementation.</p>  
+                     </div>
+                 </li>
+                <li class="accordions__item">
+                     <button class="accordions__control" aria-expanded="false">
+                         <span class="accordions__number">04</span>
+                         <span class="accordions__title">Question Four</span>
+                         <span class="accordions__icon"></span>
+                     </button>
+                     <div class="accordions__content text" aria-hidden="true">
+                       <p>Strategy implementation is the process of turning your strategic plan into action. Whether you're executing a new marketing plan to increase sales or introducing a new work management software to increase efficiency—your plan is only as valuable as the implementation.</p>  
+                     </div>
+                 </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ------------------------------------ -->
+      
+      <div class="featured-catagory featured-section">
+        <div class="heading-style-one">
+          <h2>Our Newsletter.</h2>
+          <p>Browse by Style, Medium, or Theme.</p>
+        </div>
+
+        <hr />
+        
+        <div class="newsletter-box">
+          <div class="newsletter-left">
+            <h2>Subscribe To Our Newsletter</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi optio ex, unde cupiditate, dolore 
+              asperiores iusto numquam debitis fugit voluptate, illum minus. Officiis temporibus soluta nesciunt
+               illo libero, vero voluptates Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi optio ex, unde cupiditate, dolore asperiores iusto numquam debitis fugit voluptate, illum minus. Officiis temporibus soluta nesciunt illo libero, vero voluptates.
+            </p>
+            <button class="btn btn1">Subscribe</button> 
+          </div>
+          <div class="newsletter-right">
+              <img src="./images/newsletter-demo-img-1.avif" alt="">
+          </div>
+        </div>
+        
+
+      </div>
+
+      <!-- ------------------------------------ -->
+
+      <footer class="footer-14398">
+      
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md-3">
+              <div class="footer-logo">
+                <img src="./images/artinnovate-logo-without-bg.png" alt="">
+              </div>
+              <a href="#" class="footer-site-logo">Art Innovate</a>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur <br>
+                adipisicing elit officiis corporis optio natus.
+               </p>
+            </div>
+            <div class="col-md-2 ml-auto">
+              <h3>Shop</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Sell online</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Examples</a></li>
+                <li><a href="#">Website editors</a></li>
+                <li><a href="#">Online retail</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 ml-auto">
+              <h3>Press</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Events</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Awards</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Online retail</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 ml-auto">
+              <h3>About</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Contacts</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <div class="row mb-4">
+              <div class="col-12 pb-4">
+                <div class="line"></div>
+              </div>
+             <div class="footer-bottom">
+              <div class="col-md-6 text-md-left">
+                <ul class="list-unstyled link-menu nav-left">
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms &amp; Conditions</a></li>
+                  <li><a href="#">Code of Conduct</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 text-md-right">
+                <ul class="list-unstyled social nav-right">
+                  <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
+                  <li><a href="#"><i class='bx bxl-twitter' ></i></a></li>
+                  <li><a href="#"><i class='bx bxl-linkedin-square' ></i></a></li>
+                  <li><a href="#"><i class='bx bxl-facebook-circle' ></i></a></li>
+                </ul>
+              </div>
+             </div>
+            </div>
+          </div>
+        </div>   
+       </div>
+      </footer>
+
+      
+    </div>
+    
+    <script src="./app.js"></script>
+    
+    <script src="locomotive-scroll.min.js"></script>
+    <script>
+        import LocomotiveScroll from 'locomotive-scroll';
+
+        const scroll = new LocomotiveScroll({
+           el: document.querySelector('.main'),
+           smooth: true
+        });
+        
+    </script>
+<!-- 
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+     -->
+  </body>
+</html>

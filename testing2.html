@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .testimonial-section {
+            position: relative;
+            width: 80%;
+            overflow: hidden;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .testimonial-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 20px;
+        }
+
+        .testimonial {
+            min-width: 300px;
+            flex-shrink: 0;
+            background-color: #eee;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .testimonial p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .arrows {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .arrow-left {
+            left: 10px;
+        }
+
+        .arrow-right {
+            right: 10px;
+        }
+
+        .arrow {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="testimonial-section">
+        <div class="arrows arrow-left" onclick="scrollLeft()">
+            <div class="arrow">&lt;</div>
+        </div>
+
+        <div class="testimonial-container" id="testimonialContainer">
+            <div class="testimonial">
+                <p>"Great service, highly recommend!"</p>
+                <p>- Client 1</p>
+            </div>
+            <div class="testimonial">
+                <p>"Amazing experience with their team."</p>
+                <p>- Client 2</p>
+            </div>
+            <div class="testimonial">
+                <p>"Very professional and reliable."</p>
+                <p>- Client 3</p>
+            </div>
+            <div class="testimonial">
+                <p>"They exceeded my expectations!"</p>
+                <p>- Client 4</p>
+            </div>
+            <div class="testimonial">
+                <p>"Amazing experience with their team."</p>
+                <p>- Client 2</p>
+            </div>
+            <div class="testimonial">
+                <p>"Very professional and reliable."</p>
+                <p>- Client 3</p>
+            </div>
+            <div class="testimonial">
+                <p>"They exceeded my expectations!"</p>
+                <p>- Client 4</p>
+            </div>
+        </div>
+
+        <div class="arrows arrow-right" onclick="scrollRight()">
+            <div class="arrow">&gt;</div>
+        </div>
+    </div>
+
+
+    <script>
+        let container = document.getElementById('testimonialContainer');
+
+        function scrollLeft() {
+            container.scrollBy({
+                left: -320,  // Scroll 320px to the left
+                behavior: 'smooth'
+            });
+            if (container.scrollLeft <= 0) {
+                container.scrollLeft = 0;  // Prevent scrolling past the start
+            }
+        }
+
+        function scrollRight() {
+            let maxScrollLeft = container.scrollWidth - container.clientWidth;
+            container.scrollBy({
+                left: 320,  // Scroll 320px to the right
+                behavior: 'smooth'
+            });
+            if (container.scrollLeft >= maxScrollLeft) {
+                container.scrollLeft = maxScrollLeft;  // Prevent scrolling past the end
+            }
+        }
+    </script>
+
+</body>
+</html>
