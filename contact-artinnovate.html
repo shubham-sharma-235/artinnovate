@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArtInnovate - Contact Us</title>
+    <link rel="stylesheet" href="faq.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./images/artinnovate-favicon.jpg"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        header{
+            background-image: url('../images/about-header-img-2.png');
+            padding: 1rem 2rem;
+            height: 80vh;
+        }
+        .navbar{
+            margin: 0;
+        }
+        .contact-header{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80%;
+            font-size: 2.4vw;
+            color: #fff;
+        }
+
+        /* ------------------------ */
+
+        #container {
+          border: solid 3px #474544;
+          max-width: 1000px;
+          margin: 0px auto;
+          position: relative;
+          padding-top: 3rem;
+          background-color: #FEFCF8;
+        }
+        .contact-container{
+            background-image: url('./images/background-img-two.jpg');
+            padding: 4rem 0;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        form {
+          padding: 37.5px;
+          padding-bottom: 0;
+          margin: 50px 0;
+        }
+        
+        .contact-container h1 {
+          color: #474544;
+          font-size: 32px;
+          font-weight: 700;
+          letter-spacing: 7px;
+          padding-bottom: 14px;
+          text-align: center;
+          text-transform: uppercase;
+        }
+        
+        .underline {
+          border-bottom: solid 2px #474544;
+          margin: -0.512em auto;
+          width: 80px;
+        }
+        
+        .icon_wrapper {
+          margin: 50px auto 0;
+          width: 100%;
+        }
+        
+        .icon {
+          display: block;
+          fill: #474544;
+          height: 50px;
+          margin: 0 auto;
+          width: 50px;
+        }
+        
+        .email {
+        	float: right;
+        	width: 45%;
+        }
+        
+        .contact-container input[type='text'], [type='email'], select, textarea {
+        	background: none;
+          border: none;
+        	border-bottom: solid 2px #474544;
+        	color: #474544;
+        	font-size: 1.000em;
+          font-weight: 400;
+          letter-spacing: 1px;
+        	margin: 0em 0 1.875em 0;
+        	padding: 0 0 0.875em 0;
+          text-transform: uppercase;
+        	width: 100%;
+        	-webkit-box-sizing: border-box;
+        	-moz-box-sizing: border-box;
+        	-ms-box-sizing: border-box;
+        	-o-box-sizing: border-box;
+        	box-sizing: border-box;
+        	-webkit-transition: all 0.3s;
+        	-moz-transition: all 0.3s;
+        	-ms-transition: all 0.3s;
+        	-o-transition: all 0.3s;
+        	transition: all 0.3s;
+        }
+        
+        input[type='text']:focus, [type='email']:focus, textarea:focus {
+        	outline: none;
+        	padding: 0 0 0.875em 0;
+        }
+        
+        .message {
+        	float: none;
+        }
+        
+        .name {
+        	float: left;
+        	width: 45%;
+        }
+        
+        select {
+          background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+          outline: none;
+          -moz-appearance: none;
+          -webkit-appearance: none;
+        }
+        
+        select::-ms-expand {
+          display: none;
+        }
+        
+        .subject {
+          width: 100%;
+        }
+        
+        .telephone {
+          width: 100%;
+        }
+        
+        textarea {
+        	line-height: 150%;
+        	height: 150px;
+        	resize: none;
+          width: 100%;
+        }
+        
+        ::-webkit-input-placeholder {
+        	color: #474544;
+        }
+        
+        :-moz-placeholder { 
+        	color: #474544;
+        	opacity: 1;
+        }
+        
+        ::-moz-placeholder {
+        	color: #474544;
+        	opacity: 1;
+        }
+        
+        :-ms-input-placeholder {
+        	color: #474544;
+        }
+        
+        #form_button {
+          background: none;
+          border: solid 2px #474544;
+          color: #474544;
+          cursor: pointer;
+          display: inline-block;
+          font-family: 'Helvetica', Arial, sans-serif;
+          font-size: 0.875em;
+          font-weight: bold;
+          outline: none;
+          padding: 20px 35px;
+          text-transform: uppercase;
+          -webkit-transition: all 0.3s;
+        	-moz-transition: all 0.3s;
+        	-ms-transition: all 0.3s;
+        	-o-transition: all 0.3s;
+        	transition: all 0.3s;
+        }
+        
+        #form_button:hover {
+          background: #474544;
+          color: #F2F3EB;
+        }
+        
+        @media screen and (max-width: 768px) {
+          #container {
+            margin: 20px auto;
+            width: 95%;
+          }
+        }
+        
+        @media screen and (max-width: 480px) {
+          h1 {
+            font-size: 26px;
+          }
+          
+          .underline {
+            width: 68px;
+          }
+          
+          #form_button {
+            padding: 15px 25px;
+          }
+        }
+        
+        @media screen and (max-width: 420px) {
+          h1 {
+            font-size: 18px;
+          }
+          
+          .icon {
+            height: 35px;
+            width: 35px;
+          }
+          
+          .underline {
+            width: 53px;
+          }
+          
+          input[type='text'], [type='email'], select, textarea {
+            font-size: 0.875em;
+          }
+        }
+        /* ------------------ */
+        .socials-container{
+            display: flex;
+            flex-direction: column;
+            margin: 14px;
+        }
+        .socials-container a{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            margin: .4rem 0;
+            border-radius: 4px;
+            padding: 1rem;
+            font-weight: 500;
+            background-color: #f3eee594;
+            border: 1px solid #858484;
+            color: #000;
+            transition: all ease-in-out .2s;
+        }
+        .socials-container i{
+            margin-right: 6px;
+        }
+        .socials-container a:hover{
+
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+        <header>
+            <!-- ------------------------------------ -->
+    
+            <div class="navbar">
+              <div class="nav-left">
+                <img src="./images/artinnovate-logo-without-bg.png" alt="" />
+              </div>
+              <div class="nav-middle">
+                <ul class="nav-links">
+                  <a class="hover-underline-animation" href="#"><li>Home</li></a>
+    
+                  <a class="hover-underline-animation" href="#"
+                    ><li>Our Products</li></a
+                  >
+    
+                  <a class="hover-underline-animation" href="#"
+                    ><li>About Us</li></a
+                  >
+    
+                  <a class="hover-underline-animation" href="#"><li>Contact</li></a>
+                </ul>
+              </div>
+              <div class="nav-right">
+                <ul class="nav-links">
+                  <a href="#"
+                    ><li>Sell <i class="bx bxs-right-top-arrow-circle"></i></li
+                  ></a>
+                </ul>
+              </div>
+            </div>
+    
+            <div class="contact-header">
+                <h1>Contact Us</h1>
+            </div>
+    
+        </header>
+  
+        <!-- ------------------------------------ -->
+
+      <!-- ------------------------------------ -->
+
+       <div class="featured-catagory featured-section">
+        <div class="heading-style-one">
+          <h2>Contact Artinnovate.</h2>
+          <p>What Our Art Lovers Are Saying.</p>
+        </div>
+
+        <hr />
+        
+        <div class="contact-container">
+            <div id="container">
+                <h1>&bull; Get in Touch &bull;</h1>
+                <div class="underline">
+                </div>
+                <form action="#" method="post" id="contact_form">
+                  <div class="name">
+                    <label for="name"></label>
+                    <input type="text" placeholder="My name is" name="name" id="name_input" required>
+                  </div>
+                  <div class="email">
+                    <label for="email"></label>
+                    <input type="email" placeholder="My e-mail is" name="email" id="email_input" required>
+                  </div>
+                  <div class="telephone">
+                    <label for="name"></label>
+                    <input type="text" placeholder="My number is" name="telephone" id="telephone_input" required>
+                  </div>
+                  <div class="subject">
+                    <label for="subject"></label>
+                    <select placeholder="Subject line" name="subject" id="subject_input" required>
+                      <option disabled hidden selected>Subject line</option>
+                      <option>I'd like to start a project</option>
+                      <option>I'd like to ask a question</option>
+                      <option>I'd like to make a proposal</option>
+                    </select>
+                  </div>
+                  <div class="message">
+                    <label for="message"></label>
+                    <textarea name="message" placeholder="I'd like to chat about" id="message_input" cols="30" rows="5" required></textarea>
+                  </div>
+                  <div class="submit">
+                    <input type="submit" value="Send Message" id="form_button" />
+                  </div>
+                </form>
+              </div>    
+        </div>
+
+      </div>
+
+      <!-- ------------------------------------ -->
+
+      <div class="featured-catagory featured-section">
+        <div class="heading-style-one">
+          <h2>Our Socials.</h2>
+          <p>What Our Art Lovers Are Saying.</p>
+        </div>
+
+        <hr />
+        
+        <div class="socials-container">
+            <a href="https://www.instagram.com/art_innovate/">
+                <i class='bx bxl-instagram-alt' ></i> Instagram
+            </a>
+            <a href="https://www.linkedin.com/company/artinnovate/about/">
+                <i class='bx bxl-linkedin-square' ></i> linkedin
+            </a>
+            <a href="mailto:artinnovate2024@gmail.com">
+                <i class='bx bxs-envelope' ></i> Email Us
+            </a>
+        </div>
+
+      </div>
+
+      <!-- ------------------------------------ -->
+
+      <footer class="footer-14398">
+      
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md-3">
+              <div class="footer-logo">
+                <img src="./images/artinnovate-logo-without-bg.png" alt="">
+              </div>
+              <a href="#" class="footer-site-logo">Art Innovate</a>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur <br>
+                adipisicing elit officiis corporis optio natus.
+               </p>
+            </div>
+            <div class="col-md-2 ml-auto">
+              <h3>Shop</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Sell online</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Examples</a></li>
+                <li><a href="#">Website editors</a></li>
+                <li><a href="#">Online retail</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 ml-auto">
+              <h3>Press</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Events</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Awards</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Online retail</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 ml-auto">
+              <h3>About</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Contacts</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <div class="row mb-4">
+              <div class="col-12 pb-4">
+                <div class="line"></div>
+              </div>
+             <div class="footer-bottom">
+              <div class="col-md-6 text-md-left">
+                <ul class="list-unstyled link-menu nav-left">
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms &amp; Conditions</a></li>
+                  <li><a href="#">Code of Conduct</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 text-md-right">
+                <ul class="list-unstyled social nav-right">
+                  <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
+                  <li><a href="#"><i class='bx bxl-twitter' ></i></a></li>
+                  <li><a href="#"><i class='bx bxl-linkedin-square' ></i></a></li>
+                  <li><a href="#"><i class='bx bxl-facebook-circle' ></i></a></li>
+                </ul>
+              </div>
+             </div>
+            </div>
+          </div>
+        </div>   
+       </div>
+      </footer>
+
+      
+    </div>
+    
+    <script src="./js/app.js"></script>
+    
+    <script src="locomotive-scroll.min.js"></script>
+    <script>
+        import LocomotiveScroll from 'locomotive-scroll';
+
+        const scroll = new LocomotiveScroll({
+           el: document.querySelector('.main'),
+           smooth: true
+        });
+        
+    </script>
+   <!-- 
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+     -->
+  </body>
+</html>

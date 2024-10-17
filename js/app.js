@@ -143,3 +143,14 @@ counters.forEach(counter => {
   observer.observe(counter);
 });
 
+// -------------------------------------------
+
+function locoInitialize(){
+  const scroll = new LocomotiveScroll({
+      el: document.querySelector('.main'),
+      smooth: true
+  });    
+}
+
+locoInitialize();
+
