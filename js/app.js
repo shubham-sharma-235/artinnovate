@@ -145,12 +145,23 @@ counters.forEach(counter => {
 
 // -------------------------------------------
 
-function locoInitialize(){
-  const scroll = new LocomotiveScroll({
-      el: document.querySelector('.main'),
-      smooth: true
-  });    
-}
+// Wait for the page to fully load
+window.onload = function() {
+  // Set a timeout for 2 seconds (2000ms)
+  setTimeout(function() {
+    // Add the 'active' class to the popup card to trigger the animation
+    document.getElementById("popupCard").classList.add("active");
+  }, 2000);
 
-locoInitialize();
+  // Close popup functionality
+  document.getElementById("closePopup").addEventListener('click', function() {
+    // Add the 'hidden' class to close with animation
+    document.getElementById("popupCard").classList.add("hidden");
+
+    // Optional: Remove popup completely after animation finishes
+    setTimeout(function() {
+      document.getElementById("popupCard").style.display = 'none';
+    }, 1000); // 1 second matches the transition duration
+  });
+};
 
