@@ -167,7 +167,7 @@ header{
   display: flex;
   height: 60vh;
   background-color: var(--secondary-bg-color);
-  /* background-image: url("../images/background-img-one.jpeg"); */
+  background-image: url("../images/background-img-one.jpeg");
 }
 .slide-image {
   width: 44%;
@@ -1390,6 +1390,7 @@ footer{
     justify-content: center;
     margin-bottom: 6rem;
     padding-bottom: 12rem;
+    background-image: none;
   }
   .slide-image {
    width: 54%;
