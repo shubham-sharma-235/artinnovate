@@ -31,12 +31,10 @@
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         header{
-            background-image: url('./images/background-img-two.jpg');
-            background-image: url('./images/about-header-img-2.png');
-            background-repeat: no-repeat;
-            background-size: 100%;
+            background-image: url('../images/about-header-img-2.png');
             padding: 1rem 2rem;
             height: 80vh;
         }
@@ -67,7 +65,7 @@
                 <ul class="nav-links">
                   <a class="hover-underline-animation" href="./index.html"><li>Home</li></a>
     
-                  <a class="hover-underline-animation" href="./our-products.html"><li>Our Products</li></a>
+                  <a class="active" href="./our-products.html"><li>Our Products</li></a>
     
                   <a class="hover-underline-animation" href="./about-artinnovate.html"><li>About Us</li></a>
     
@@ -103,7 +101,12 @@
         <hr />
         
         <div class="head-featured-images">
-          <div class="image-container">
+          <div class="image-container" 
+              data-aos="fade-up"
+              data-aos-offset="100"
+              data-aos-delay="20"
+              data-aos-duration="400"
+            >
             <img src="https://images.unsplash.com/photo-1611149916119-c6c16eb89f89?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Art Piece" class="image">
             <div class="overlay">
                 <div class="text">
@@ -113,7 +116,12 @@
             </div>
           </div>
           
-          <div class="image-container">
+          <div class="image-container"
+              data-aos="fade-up"
+              data-aos-offset="150"
+              data-aos-delay="40"
+              data-aos-duration="800"
+            >
             <img src="https://images.unsplash.com/photo-1567366865504-ffd4cc9ce7bc?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Art Piece" class="image">
             <div class="overlay">
                 <div class="text">
@@ -123,7 +131,12 @@
             </div>
           </div>
           
-          <div class="image-container">
+          <div class="image-container"
+              data-aos="fade-up"
+              data-aos-offset="200"
+              data-aos-delay="60"
+              data-aos-duration="1000"
+            >
             <img src="https://images.unsplash.com/photo-1573407613054-1765da91bab2?q=80&w=1635&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Art Piece" class="image">
             <div class="overlay">
                 <div class="text">
@@ -133,7 +146,12 @@
             </div>
           </div>
           
-          <div class="image-container">
+          <div class="image-container"
+              data-aos="fade-up"
+              data-aos-offset="250"
+              data-aos-delay="80"
+              data-aos-duration="1200"
+            >
             <img src="https://images.unsplash.com/photo-1711880654441-e3d3cc56204b?q=80&w=1652&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Art Piece" class="image">
             <div class="overlay">
                 <div class="text">
@@ -496,16 +514,9 @@
     </div>
     
     <script src="./js/app.js"></script>
-    
-    <script src="locomotive-scroll.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        import LocomotiveScroll from 'locomotive-scroll';
-
-        const scroll = new LocomotiveScroll({
-           el: document.querySelector('.main'),
-           smooth: true
-        });
-        
+      AOS.init();
     </script>
    <!-- 
     <script src="js/jquery-3.3.1.min.js"></script>
