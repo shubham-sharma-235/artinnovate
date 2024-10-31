@@ -805,7 +805,7 @@ header{
   align-items: center;
 }
 .testimonial-scroll img{
-  height: 50vh;
+  height: 24vw;
   width: 24vw;
   margin: 10px;
 }
@@ -1614,6 +1614,12 @@ footer{
     border-left: 1px solid #ccc;
   }
    
+
+  .testimonial-scroll img{
+    height: 64vw;
+    width: 64vw;
+    margin: 10px;
+  }
 
   .newsletter-section {
     margin-top: 2rem;
