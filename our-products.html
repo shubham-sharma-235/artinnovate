@@ -51,6 +51,7 @@
             color: #fff;
         }
     </style>
+    <link rel="stylesheet" href="./css/our-product.css">
   </head>
   <body>
     <div class="main">
@@ -92,224 +93,127 @@
 
       <!-- ------------------------------------ -->
 
-      <div class="featured-section featured-section-main">
-        
+
+      <div class="product-page-catagory">
         <div class="heading-style-one">
-          <h2>Our Artworks</h2>
-          <p>Top pices of the week.</p>
+          <h2>Shop By Catagories</h2>
+          <p>Browse by Style, Medium, or Theme.</p>
         </div>
-
+  
         <hr />
-
-        <div class="product-section">
-
-              <div class="product-card">
-                <div class="product-card-head">
-                    <span>October 12, 2024</span>
-                    <span>Oil Pastel</span>
-                </div>
-                <div class="product-img">
-                    <img src="./images/product-demo-img.jpg" alt="">
-                </div>
-                <div class="product-details">
-                    <h3>Name of the artwork</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente magni unde anim
-                    </p>
-                    <button>Explore</button>
-               </div>
+  
+        <div class="top-bar">
+          
+          <div class="dropdown">
+            <button class="dropbtn">Medium</button>
+            <div class="dropdown-content" id="medium-dropdown">
+              <button onclick="filterPaintings('Paintings')">Paintings</button>
+              <button onclick="filterPaintings('Sketches')">Sketches</button>
+            </div>
+          </div>
+  
+          <div class="dropdown">
+            <button class="dropbtn">Style</button>
+            <div class="dropdown-content" id="style-dropdown">
+              <button onclick="filterPaintings('Indian Miniature')">Indian Miniature</button>
+              <button onclick="filterPaintings('Style Sketches')">Sketches</button>
+              <!-- <button onclick="filterPaintings('Contemporary')">Contemporary</button> -->
+              <div class="dropdown-sub-content">
+                <button onclick="filterPaintings('Hand Painted Wall Art')">Hand Painted Wall Art</button>
               </div>
-              
-              <div class="product-card">
-                <div class="product-card-head">
-                    <span>October 12, 2024</span>
-                    <span>Oil Pastel</span>
-                </div>
-                <div class="product-img">
-                    <img src="./images/product-demo-img-3.png" alt="">
-                </div>
-                <div class="product-details">
-                    <h3>Name of the artwork</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente magni unde anim
-                    </p>
-                    <button>Explore</button>
-               </div>
-              </div>
-              <div class="product-card">
-                <div class="product-card-head">
-                    <span>October 12, 2024</span>
-                    <span>Oil Pastel</span>
-                </div>
-                <div class="product-img">
-                  <img src="./images/product-demo-img-2.png" alt="">
-                </div>
-                <div class="product-details">
-                    <h3>Name of the artwork</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente magni unde anim
-                    </p>
-                    <button>Explore</button>
-               </div>
-              </div>
-              <div class="product-card">
-                <div class="product-card-head">
-                    <span>October 12, 2024</span>
-                    <span>Oil Pastel</span>
-                </div>
-                <div class="product-img">
-                    <img src="./images/product-demo-img-4.png" alt="">
-                </div>
-                <div class="product-details">
-                    <h3>Name of the artwork</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente magni unde anim
-                    </p>
-                    <button>Explore</button>
-               </div>
-              </div>
+            </div>
+          </div>
+  
+          <div class="dropdown">
+            <button class="dropbtn">Contemporary</button>
+            <div class="dropdown-content" id="style-dropdown">
+              <button onclick="filterPaintings('Hand Painted Wall Art')">Hand Painted Wall Art</button>
+            </div>
+          </div>
+  
+          <div class="dropdown">
+            <button class="dropbtn">Price Range</button>
+            <div class="dropdown-content" id="price-dropdown">
+              <button onclick="filterByPrice(10000, 30000)">₹10,000 - ₹30,000</button>
+              <button onclick="filterByPrice(30000, 60000)">₹30,000 - ₹60,000</button>
+              <button onclick="filterByPrice(60000, 100000)">₹60,000 - ₹1,00,000</button>
+              <button onclick="filterByPrice(100000, 140000)">₹1,00,000 - ₹1,40,000</button>
+              <button onclick="filterByPrice(140000, 180000)">₹1,40,000 - ₹1,80,000</button>
+              <button onclick="filterByPrice(180000, 200000)">₹1,80,000 - ₹2,00,000</button>
+            </div>
+          </div>
+  
         </div>
-
-        <div class="product-section">
-
-              <div class="product-card">
-                <div class="product-card-head">
-                    <span>October 12, 2024</span>
-                    <span>Oil Pastel</span>
-                </div>
-                <div class="product-img">
-                    <img src="./images/product-demo-img.jpg" alt="">
-                </div>
-                <div class="product-details">
-                    <h3>Name of the artwork</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente magni unde anim
-                    </p>
-                    <button>Explore</button>
-               </div>
-              </div>
-              
-              <div class="product-card">
-                <div class="product-card-head">
-                    <span>October 12, 2024</span>
-                    <span>Oil Pastel</span>
-                </div>
-                <div class="product-img">
-                    <img src="./images/product-demo-img-3.png" alt="">
-                </div>
-                <div class="product-details">
-                    <h3>Name of the artwork</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente magni unde anim
-                    </p>
-                    <button>Explore</button>
-               </div>
-              </div>
-              <div class="product-card">
-                <div class="product-card-head">
-                    <span>October 12, 2024</span>
-                    <span>Oil Pastel</span>
-                </div>
-                <div class="product-img">
-                  <img src="./images/product-demo-img-2.png" alt="">
-                </div>
-                <div class="product-details">
-                    <h3>Name of the artwork</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente magni unde anim
-                    </p>
-                    <button>Explore</button>
-               </div>
-              </div>
-              <div class="product-card">
-                <div class="product-card-head">
-                    <span>October 12, 2024</span>
-                    <span>Oil Pastel</span>
-                </div>
-                <div class="product-img">
-                    <img src="./images/product-demo-img-4.png" alt="">
-                </div>
-                <div class="product-details">
-                    <h3>Name of the artwork</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente magni unde anim
-                    </p>
-                    <button>Explore</button>
-               </div>
-              </div>
-         </div>
-
-
-        <div class="product-section">
-
-              <div class="product-card">
-                <div class="product-card-head">
-                    <span>October 12, 2024</span>
-                    <span>Oil Pastel</span>
-                </div>
-                <div class="product-img">
-                    <img src="./images/product-demo-img.jpg" alt="">
-                </div>
-                <div class="product-details">
-                    <h3>Name of the artwork</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente magni unde anim
-                    </p>
-                    <button>Explore</button>
-               </div>
-              </div>
-              
-              <div class="product-card">
-                <div class="product-card-head">
-                    <span>October 12, 2024</span>
-                    <span>Oil Pastel</span>
-                </div>
-                <div class="product-img">
-                    <img src="./images/product-demo-img-3.png" alt="">
-                </div>
-                <div class="product-details">
-                    <h3>Name of the artwork</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente magni unde anim
-                    </p>
-                    <button>Explore</button>
-               </div>
-              </div>
-              <div class="product-card">
-                <div class="product-card-head">
-                    <span>October 12, 2024</span>
-                    <span>Oil Pastel</span>
-                </div>
-                <div class="product-img">
-                  <img src="./images/product-demo-img-2.png" alt="">
-                </div>
-                <div class="product-details">
-                    <h3>Name of the artwork</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente magni unde anim
-                    </p>
-                    <button>Explore</button>
-               </div>
-              </div>
-              <div class="product-card">
-                <div class="product-card-head">
-                    <span>October 12, 2024</span>
-                    <span>Oil Pastel</span>
-                </div>
-                <div class="product-img">
-                    <img src="./images/product-demo-img-4.png" alt="">
-                </div>
-                <div class="product-details">
-                    <h3>Name of the artwork</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente magni unde anim
-                    </p>
-                    <button>Explore</button>
-               </div>
-              </div>
-         </div>
+      
+        <div class="paintings" id="paintings">
+          <!-- Sample paintings for demo -->
+  
+          <!-- --- Medium > Paintings--- -->
+          <div class="painting" data-category="Paintings">
+            
+            <h4>Medium > Paintings</h4>
+            
+          </div>
+          
+          <!-- --- Medium > Sketches--- -->
+          <div class="painting" data-category="Sketches">
+            
+            <h4>Medium > Sketches</h4>
+            
+          </div>
+  
+          <!-- ---------------------------------------------- -->
+          
+          <!-- --- Style > Indian Miniature--- -->
+          <div class="painting" data-category="Indian Miniature">
+            
+            <h4>Style > Indian Miniature</h4>
+            
+          </div>
+          
+          <!-- --- Style > Sketches --- -->
+          <div class="painting" data-category="Style Sketches">
+            
+            <h4>Style > Sketches</h4>
+            
+          </div>
+          
+          <!-- --- Style > Sketches --- -->
+          <div class="painting" data-category="Contemporary">
+            
+            <h4>Style > Contemporary</h4>
+            
+          </div>
+          
+          <!-- --- contemporary  > Hand Painted Wall Art  --- -->
+          <div class="painting" data-category="Hand Painted Wall Art">
+            
+            <h4>Contemporary > Hand Painted Wall Art</h4>
+            
+          </div>
+  
+          <!-- ---------------------------------------------- -->
+  
+  
+          <div class="paintings price-dropdown-content" id="paintings">
+            <!-- Sample paintings for demo with price data -->
+            <div class="painting" data-price="15000">Painting A - ₹15,000</div>
+            <div class="painting" data-price="25000">Painting B - ₹25,000</div>
+            <div class="painting" data-price="50000">Painting C - ₹50,000</div>
+            <div class="painting" data-price="75000">Painting D - ₹75,000</div>
+            <div class="painting" data-price="120000">Painting E - ₹1,20,000</div>
+            <div class="painting" data-price="160000">Painting F - ₹1,60,000</div>
+            <div class="painting" data-price="190000">Painting G - ₹1,90,000</div>
+          </div>
+  
+          
+          
+          <!-- <div class="painting" data-category="Sketches" data-style="Sketches" data-price="20000">Sketch</div>
+  
+          <div class="painting" data-category="Paintings" data-style="Hand Painted Wall Art" data-price="50000">Contemporary Wall Art</div> -->
+  
+        </div>
       </div>
-
 
       <!-- ------------------------------------ -->
 
@@ -334,7 +238,7 @@
             <a href="https://artinnovate-beta.streamlit.app/" target="_blank" class="slide-btn btn btn1">Explore Now</a>
           </div>
           <div class="price-predictor-card-right">
-              <img src="./images/ai-card-demo-img.png" alt="">
+              <img src="./images/ai-card-img.png" alt="">
           </div>
 
         </div>
@@ -356,7 +260,6 @@
                 <input placeholder="Enter Your Email Id" type="email">
                 <button>Submit</button>
               </div>
-              
           </div>
       </div>
 
@@ -444,10 +347,30 @@
     <script>
       AOS.init();
     </script>
-   <!-- 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-     -->
+
+     <script>
+      function filterPaintings(category) {
+        const paintings = document.querySelectorAll('.painting');
+        paintings.forEach(painting => {
+          if (painting.getAttribute('data-category') === category || painting.getAttribute('data-style') === category) {
+            painting.style.display = 'block';
+          } else {
+            painting.style.display = 'none';
+          }
+        });
+      }
+
+      function filterByPrice(minPrice, maxPrice) {
+      const paintings = document.querySelectorAll('.painting');
+         paintings.forEach(painting => {
+           const price = parseInt(painting.getAttribute('data-price'), 10);
+           if (price >= minPrice && price <= maxPrice) {
+             painting.style.display = 'block';
+           } else {
+             painting.style.display = 'none';
+           }
+         });
+      }
+    </script>
   </body>
 </html>

@@ -5,9 +5,6 @@
 }
 .artwork-container {
   display: flex;
-  /* width: 90%; */
-  /* max-width: 1200px; */
-  /* align-items: flex-start; */
   gap: 40px;
   padding: 4rem 0;
 }

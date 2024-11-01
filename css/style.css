@@ -676,6 +676,12 @@ header{
 .catagory-section {
   /* background-color: #c9ddfe53; */
 }
+.catagory-buttons-div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .catagory-buttons {
   margin: 2.4rem 1rem;
