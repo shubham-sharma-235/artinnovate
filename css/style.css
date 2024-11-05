@@ -1745,12 +1745,28 @@ footer{
     margin-top: 2rem;
     height: 36vh;
   }
+  .newsletter-card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .newsletter-section h2 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+  
+  .newsletter-section hr{
+    width: 30%;
     margin-bottom: 12px;
   }
   .newsletter-section p{
-    font-size: 16px;
+    font-size: 14px;
+    width: 90%;
+  }
+  .newsletter-email input {
+    width: 14rem; 
   }
 
 

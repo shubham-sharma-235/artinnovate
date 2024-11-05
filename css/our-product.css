@@ -1,3 +1,6 @@
+header{
+  padding: 1rem 1rem;
+}
 .product-page-catagory{
     padding: 2rem;
 }
@@ -74,6 +77,18 @@
 
   .top-bar {
       flex-direction: column; /* Stack buttons vertically */
+  }
+  .product-page-catagory{
+    padding: 0rem;
+    padding-top: 16px;
+  }
+  header {
+    background-image: url(../images/about-header-img-2.png);
+    padding: 1rem 1rem;
+    height: 80vh;
+  }
+  .product-header h1{
+    font-size: 6vh;
   }
 }
 

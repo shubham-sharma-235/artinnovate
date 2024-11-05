@@ -30,10 +30,11 @@
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
       header{
         background-image: url('../images/about-header-img-2.png');
-        padding: 1rem 2rem;
+        padding: 1rem 1rem;
         height: 80vh;
       }
       .navbar{
@@ -83,10 +84,6 @@
       }
       
       
-      .solutions-container{
-          
-      }
-      
       @media(max-width:900px){
           .about-containers {
               flex-direction: column;
@@ -128,6 +125,7 @@
               font-weight: 350;
           }
       }
+
         
     </style>
   </head>
@@ -165,9 +163,9 @@
 
         <div class="sidebar" id="sidebar">
           <ul class="sidebar-links">
-              <li><a class="active" href="./index.html">Home</a></li>
+              <li><a href="./index.html">Home</a></li>
               <li><a href="./our-products.html">Our Products</a></li>
-              <li><a href="./about-artinnovate.html">About Us</a></li>
+              <li><a class="active" href="./about-artinnovate.html">About Us</a></li>
               <li><a href="./contact-artinnovate.html">Contact</a></li>
               <li><a href="https://artinnovate-beta.streamlit.app/" target="_blank">Price Predictor</a></li>
           </ul>
@@ -388,6 +386,10 @@
            smooth: true
         });
         
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
 <!-- 
     <script src="js/jquery-3.3.1.min.js"></script>
