@@ -284,29 +284,41 @@
         <header>
             <!-- ------------------------------------ -->
     
-            <div class="navbar">
+            <div class="navbar" data-aos="fade-down">
               <div class="nav-left">
-                <img src="./images/artinnovate-logo-without-bg.png" alt="" />
+                  <img src="./images/artinnovate-logo-without-bg.png" alt="Art Innovate Logo" />
               </div>
               <div class="nav-middle">
-                <ul class="nav-links">
-                  <a class="hover-underline-animation" href="./index.html"><li>Home</li></a>
-    
-                  <a class="hover-underline-animation" href="./our-products.html"><li>Our Products</li></a>
-    
-                  <a class="hover-underline-animation" href="./about-artinnovate.html"><li>About Us</li></a>
-    
-                  <a class="active" href="./contact-artinnovate.html"><li>Contact</li></a>
-  
-                </ul>
+                  <ul class="nav-links">
+                      <a class="hover-underline-animation" href="./index.html"><li>Home</li></a>
+                      <a class="hover-underline-animation" href="./our-products.html"><li>Our Products</li></a>
+                      <a class="hover-underline-animation" href="./about-artinnovate.html"><li>About Us</li></a>
+                      <a class="hover-underline-animation active" href="./contact-artinnovate.html"><li>Contact</li></a>
+                  </ul>
               </div>
               <div class="nav-right">
-                <ul class="nav-links">
-                  <a href="https://artinnovate-beta.streamlit.app/" target="_blank"
-                    ><li class="nav-btn">Price Predictor<i class="bx bxs-right-top-arrow-circle"></i></li
-                  ></a>
-                </ul>
+                  <ul class="nav-links">
+                      <a href="https://artinnovate-beta.streamlit.app/" target="_blank">
+                          <li class="nav-btn">Price Predictor<i class="bx bxs-right-top-arrow-circle"></i></li>
+                      </a>
+                  </ul>
               </div>
+              <div class="menu-icon" onclick="toggleMenu()">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+              </div>
+            </div>
+
+            <div class="sidebar" id="sidebar">
+              <ul class="sidebar-links">
+                  <li><a href="./index.html">Home</a></li>
+                  <li><a href="./our-products.html">Our Products</a></li>
+                  <li><a href="./about-artinnovate.html">About Us</a></li>
+                  <li><a class="active"  href="./contact-artinnovate.html">Contact</a></li>
+                  <li><a href="https://artinnovate-beta.streamlit.app/" target="_blank">Price Predictor</a></li>
+              </ul>
+              <span class="close-btn" onclick="toggleMenu()">&times;</span>
             </div>
     
             <div class="contact-header">

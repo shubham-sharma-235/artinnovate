@@ -58,29 +58,41 @@
         <header>
             <!-- ------------------------------------ -->
     
-            <div class="navbar">
+            <div class="navbar" data-aos="fade-down">
               <div class="nav-left">
-                <img src="./images/artinnovate-logo-without-bg.png" alt="" />
+                  <img src="./images/artinnovate-logo-without-bg.png" alt="Art Innovate Logo" />
               </div>
               <div class="nav-middle">
-                <ul class="nav-links">
-                  <a class="hover-underline-animation" href="./index.html"><li>Home</li></a>
-    
-                  <a class="active" href="./our-products.html"><li>Our Products</li></a>
-    
-                  <a class="hover-underline-animation" href="./about-artinnovate.html"><li>About Us</li></a>
-    
-                  <a class="hover-underline-animation" href="./contact-artinnovate.html"><li>Contact</li></a>
-  
-                </ul>
+                  <ul class="nav-links">
+                      <a class="hover-underline-animation" href="./index.html"><li>Home</li></a>
+                      <a class="hover-underline-animation active" href="./our-products.html"><li>Our Products</li></a>
+                      <a class="hover-underline-animation" href="./about-artinnovate.html"><li>About Us</li></a>
+                      <a class="hover-underline-animation" href="./contact-artinnovate.html"><li>Contact</li></a>
+                  </ul>
               </div>
               <div class="nav-right">
-                <ul class="nav-links">
-                  <a href="https://artinnovate-beta.streamlit.app/" target="_blank"
-                    ><li class="nav-btn">Price Predictor<i class="bx bxs-right-top-arrow-circle"></i></li
-                  ></a>
-                </ul>
+                  <ul class="nav-links">
+                      <a href="https://artinnovate-beta.streamlit.app/" target="_blank">
+                          <li class="nav-btn">Price Predictor<i class="bx bxs-right-top-arrow-circle"></i></li>
+                      </a>
+                  </ul>
               </div>
+              <div class="menu-icon" onclick="toggleMenu()">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+              </div>
+            </div>
+
+            <div class="sidebar" id="sidebar">
+              <ul class="sidebar-links">
+                  <li><a href="./index.html">Home</a></li>
+                  <li><a class="active" href="./our-products.html">Our Products</a></li>
+                  <li><a href="./about-artinnovate.html">About Us</a></li>
+                  <li><a href="./contact-artinnovate.html">Contact</a></li>
+                  <li><a href="https://artinnovate-beta.streamlit.app/" target="_blank">Price Predictor</a></li>
+              </ul>
+              <span class="close-btn" onclick="toggleMenu()">&times;</span>
             </div>
     
             <div class="product-header">
@@ -103,116 +115,523 @@
         <hr />
   
         <div class="top-bar">
-          
+
+          <!-- Medium Filter -->
           <div class="dropdown">
-            <button class="dropbtn">Medium</button>
-            <div class="dropdown-content" id="medium-dropdown">
-              <button onclick="filterPaintings('Paintings')">Paintings</button>
-              <button onclick="filterPaintings('Sketches')">Sketches</button>
-            </div>
-          </div>
-  
-          <div class="dropdown">
-            <button class="dropbtn">Style</button>
-            <div class="dropdown-content" id="style-dropdown">
-              <button onclick="filterPaintings('Indian Miniature')">Indian Miniature</button>
-              <button onclick="filterPaintings('Style Sketches')">Sketches</button>
-              <!-- <button onclick="filterPaintings('Contemporary')">Contemporary</button> -->
-              <div class="dropdown-sub-content">
-                <button onclick="filterPaintings('Hand Painted Wall Art')">Hand Painted Wall Art</button>
+              <button class="dropbtn">Medium</button>
+              <div class="dropdown-content" id="medium-dropdown">
+                  <button onclick="filterPaintings('Painting')">Painting</button>
+                  <button onclick="filterPaintings('Sketch')">Sketch</button>
+                  <button onclick="filterPaintings('CHarcoleSketch')">Charcoal Sketch</button>
+                  <button onclick="filterPaintings('acrylic')">Acrylic</button>
               </div>
-            </div>
           </div>
   
+          <!-- Style Filter -->
           <div class="dropdown">
-            <button class="dropbtn">Contemporary</button>
-            <div class="dropdown-content" id="style-dropdown">
-              <button onclick="filterPaintings('Hand Painted Wall Art')">Hand Painted Wall Art</button>
-            </div>
+              <button class="dropbtn">Style</button>
+              <div class="dropdown-content" id="style-dropdown">
+                  <button onclick="filterPaintings('Indian Miniature')">Indian Miniature</button>
+              </div>
           </div>
   
+          <!-- Contemporary Filter -->
           <div class="dropdown">
-            <button class="dropbtn">Price Range</button>
-            <div class="dropdown-content" id="price-dropdown">
-              <button onclick="filterByPrice(10000, 30000)">₹10,000 - ₹30,000</button>
-              <button onclick="filterByPrice(30000, 60000)">₹30,000 - ₹60,000</button>
-              <button onclick="filterByPrice(60000, 100000)">₹60,000 - ₹1,00,000</button>
-              <button onclick="filterByPrice(100000, 140000)">₹1,00,000 - ₹1,40,000</button>
-              <button onclick="filterByPrice(140000, 180000)">₹1,40,000 - ₹1,80,000</button>
-              <button onclick="filterByPrice(180000, 200000)">₹1,80,000 - ₹2,00,000</button>
-            </div>
+              <button class="dropbtn">Contemporary</button>
+              <div class="dropdown-content" id="contemporary-dropdown">
+                  <button onclick="filterPaintings('Hand Painted Wall Art')">Hand Painted Wall Art</button>
+              </div>
+          </div>
+  
+          <!-- Price Filter -->
+          <div class="dropdown">
+              <button class="dropbtn">Price Range</button>
+              <div class="dropdown-content" id="price-dropdown">
+                  <button onclick="filterByPrice(20000, 50000)">₹20,000 - ₹50,000</button>
+                  <button onclick="filterByPrice(50000, 100000)">₹50,000 - ₹1,00,000</button>
+                  <button onclick="filterByPrice(100000, 150000)">₹1,00,000 - ₹1,50,000</button>
+                  <button onclick="filterByPrice(150000, 200000)">₹1,50,000 - ₹2,00,000</button>
+              </div>
           </div>
   
         </div>
+
+        <!-- -------------------------------------------------------------------------------------------------- -->
       
         <div class="paintings" id="paintings">
-          <!-- Sample paintings for demo -->
-  
-          <!-- --- Medium > Paintings--- -->
-          <div class="painting" data-category="Paintings">
-            
-            <h4>Medium > Paintings</h4>
+          <!-- Sample paintings -->
+          <div class="painting" data-medium="Painting" data-style="Indian Miniature" data-contemporary="" data-price="30000">
+
+            <div class="product-section">
+              <!-- ---------------------------- -->
+                <div class="product-card">
+                 <div class="product-card-head">
+                     <span>October 09, 2021</span>
+                     <span>Painting</span>
+                 </div>
+                 <div class="product-img">
+                     <img src="./images/paintings/painting-5.jpg" alt="">
+                 </div>
+                 <div class="product-details">
+                     <h3>Krishna Fluting in a Landscape</h3>
+                     <p>
+                       Krishna enchanting gopis in a fine 18th-century Bikaner-Deccan gouache style.
+                     </p>
+                     <a href="./our-products/krishna-fluting-painting.html"><button>Explore</button></a>
+                  </div>
+                </div>
+              <!-- ---------------------------- -->
+              <div class="product-card">
+                <div class="product-card-head">
+                    <span>Feb 12, 2021</span>
+                    <span>Painting</span>
+                </div>
+                <div class="product-img">
+                    <img src="./images/paintings/painting-6.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <h3>Shiva in Tantric Form</h3>
+                    <p>
+                      An 18th-century Rajasthani yantra showing cosmic chakras with Shiv-Shakti and Vishnu.
+                    </p>
+                    <a href="./our-products/shiva-in-tantric-form.html"><button>Explore</button></a>
+               </div>
+              </div>
+              <!-- ---------------------------- -->
+
+              <div class="product-card">
+                <div class="product-card-head">
+                    <span>January 12, 2023</span>
+                    <span>Oil Pastel</span>
+                </div>
+                <div class="product-img">
+                    <img src="./images/paintings/painting-2.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <h3>Maharana inspecting a horse</h3>
+                    <p>
+                        An 18th-century Mewar painting shows Maharana Sajjan Singh ji, inspecting a horse.
+                    </p>
+                    <a href="./our-products/maharana-inspecting-a-horse.html"><button>Explore</button></a>
+               </div>
+              </div>
+
+              <!-- ---------------------------- -->
+
+              <div class="product-card">
+                <div class="product-card-head">
+                    <span>October 2, 2024</span>
+                    <span>Pastels</span>
+                </div>
+                <div class="product-img">
+                  <img src="./images/paintings/painting-3.JPG" alt="">
+                </div>
+                <div class="product-details">
+                    <h3>Maharaja</h3>
+                    <p>
+                      Maharaja gracefully roaming the grounds, exuding regal elegance
+                    </p>
+                    <a href="./our-products/maharaja-painting.html">
+                      <button>Explore</button>
+                    </a>
+               </div>
+              </div>
+
+              <!-- ---------------------------- -->
+
+            </div>
+            <!-- ----------------- -->
+            <div class="product-section">
+              <!-- ---------------------------- -->
+              <div class="product-card">
+                <div class="product-card-head">
+                    <span>October 2, 2024</span>
+                    <span>Pastels</span>
+                </div>
+                <div class="product-img">
+                  <img src="./images/paintings/painting-7.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <h3>Darshans of Shrinath Ji</h3>
+                    <p>
+                      A 19th-century Nathdwara painting of Shrinath ji with stylized figures.
+                    </p>
+                    <a href="./our-products/darshans-of-shrinath-ji.html">
+                      <button>Explore</button>
+                    </a>
+               </div>
+              </div>
+              <!-- ---------------------------- -->
+              <div class="product-card">
+                <div class="product-card-head">
+                    <span>October 23, 2022</span>
+                    <span>Acrylic</span>
+                </div>
+                <div class="product-img">
+                    <img src="./images/paintings/painting-8.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <h3>Bal Swarup of Krishna</h3>
+                    <p>
+                      An 18th-century Nathdwara painting of bal Swarup Krishna with jhaankis in pastel colors.
+                    </p>
+                    <a href="./our-products/bal-swarup-of-krishna.html"><button>Explore</button></a>
+               </div>
+              </div>
+              <!-- ---------------------------- -->
+              <div class="product-card">
+                <div class="product-card-head">
+                    <span>January 12, 2023</span>
+                    <span>Oil Pastel</span>
+                </div>
+                <div class="product-img">
+                    <img src="./images/paintings/painting-9.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <h3>Indra with Fairies and Demons</h3>
+                    <p>
+                      An 18th-century Pahari painting of Indra entertained by fairies, with plotting demons.
+                    </p>
+                    <a href="./our-products/indra-with-fairies-and-demons.html"><button>Explore</button></a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- -------------------------------------------------------------------------------------------------- -->
+
+          <div class="painting" data-medium="Sketch"  data-style="Indian Miniature" data-contemporary="" data-price="60000">
+
+            <div class="product-section">
+              <!-- ---------------------------- -->
+              <div class="product-card">
+                <div class="product-card-head">
+                    <span>October 23, 2022</span>
+                    <span>Acrylic</span>
+                </div>
+                <div class="product-img">
+                    <img src="./images/paintings/painting-1.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <h3>Inhabitants of the Island of Salsette</h3>
+                    <p>
+                      An intricate sketch of mendicants in Varanasi, capturing their traditional attire and ascetic life.
+                    </p>
+                    <a href="./our-products/inhabitants.html"><button>Explore</button></a>
+               </div>
+              </div>
+              <!-- ---------------------------- -->
+              <div class="product-card">
+                <div class="product-card-head">
+                    <span>January 12, 2023</span>
+                    <span>Oil Pastel</span>
+                </div>
+                <div class="product-img">
+                    <img src="./images/paintings/painting-11.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <h3>Religious Mendicants, Benares</h3>
+                    <p>
+                      A detailed sketch of three Salsette women in traditional attire resting in a rustic stone setting.
+                    </p>
+                    <a href="./our-products/mendicants.html"><button>Explore</button></a>
+                </div>
+              </div>
+              <!-- ---------------------------- -->
+              <div class="product-card">
+                <div class="product-card-head">
+                    <span>January 12, 2023</span>
+                    <span>Oil Pastel</span>
+                </div>
+                <div class="product-img">
+                    <img src="./images/paintings/painting-9.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <h3>Indra with Fairies and Demons</h3>
+                    <p>
+                      An 18th-century Pahari painting of Indra entertained by fairies, with plotting demons.
+                    </p>
+                    <a href="./our-products/indra-with-fairies-and-demons.html"><button>Explore</button></a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- -------------------------------------------------------------------------------------------------- -->
+
+          <div class="painting" data-medium="Painting" data-style="Indian Miniature" data-contemporary="Hand Painted Wall Art" data-price="120000">
+
+
+            <div class="product-section">
+              <!-- ---------------------------- -->
+              <div class="product-card">
+                <div class="product-card-head">
+                    <span>October 23, 2022</span>
+                    <span>Wall Art</span>
+                </div>
+                <div class="product-img">
+                    <img src="./images/paintings/painting-12.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <h3>Doves and Pigeons Series</h3>
+                    <p>
+                      A serene dove against a soft backdrop, embodying peace.
+                    </p>
+                    <a href="./our-products/dove-pigeons-painting-one.html"><button>Explore</button></a>
+               </div>
+              </div>
+              <!-- ---------------------------- -->
+              <div class="product-card">
+                <div class="product-card-head">
+                    <span>January 12, 2023</span>
+                    <span>Wall Art</span>
+                </div>
+                <div class="product-img">
+                    <img src="./images/paintings/painting-13.JPG" alt="">
+                </div>
+                <div class="product-details">
+                    <h3>Doves and Pigeons Series</h3>
+                    <p>
+                      A poised pigeon standing proudly, showcasing elegance.
+                    </p>
+                    <a href="./our-products/dove-pigeons-painting-two.html"><button>Explore</button></a>
+                </div>
+              </div>
+              <!-- ---------------------------- -->
+              <div class="product-card">
+                <div class="product-card-head">
+                    <span>January 12, 2023</span>
+                    <span>Wall Art</span>
+                </div>
+                <div class="product-img">
+                    <img src="./images/paintings/painting-14.jpg" alt="">
+                </div>
+                <div class="product-details">
+                  <h3>Doves and Pigeons Series</h3>
+                    <p>
+                      A solitary dove standing serenely, highlighting delicate features.
+                    </p>
+                    <a href="./our-products/dove-pigeons-painting-three.html"><button>Explore</button></a>
+                </div>
+              </div>
+              <!-- ---------------------------- -->
+              <div class="product-card">
+                <div class="product-card-head">
+                    <span>January 12, 2023</span>
+                    <span>Wall Art</span>
+                </div>
+                <div class="product-img">
+                    <img src="./images/paintings/painting-15.jpg" alt="">
+                </div>
+                <div class="product-details">
+                  <h3>Doves and Pigeons Series</h3>
+                    <p>
+                      A regal pigeon standing still, exuding charm and calm.
+                    </p>
+                    <a href="./our-products/dove-pigeons-painting-four.html"><button>Explore</button></a>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="product-section">
+              <!-- ---------------------------- -->
+              <div class="product-card">
+                <div class="product-card-head">
+                    <span>October 23, 2022</span>
+                    <span>Wall Art</span>
+                </div>
+                <div class="product-img">
+                    <img src="./images/paintings/painting-16.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <h3>Geometric Abstraction Wall Art</h3>
+                    <p>
+                      A striking geometric abstraction that blends muted tones with organic shapes.
+                    </p>
+                    <a href="./our-products/geometric-wall-art-one.html"><button>Explore</button></a>
+               </div>
+              </div>
+              <!-- ---------------------------- -->
+              <div class="product-card">
+                <div class="product-card-head">
+                    <span>January 12, 2023</span>
+                    <span>Wall Art</span>
+                </div>
+                <div class="product-img">
+                    <img src="./images/paintings/painting-17.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <h3>Geometric Abstraction Wall Art</h3>
+                    <p>
+                      This piece enhances modern sophistication, perfect for contemporary interiors.
+                    </p>
+                    <a href="./our-products/geometric-wall-art-two.html"><button>Explore</button></a>
+                </div>
+              </div>
+
+            </div>
             
           </div>
+
+          <!-- -------------------------------------------------------------------------------------------------- -->
           
-          <!-- --- Medium > Sketches--- -->
-          <div class="painting" data-category="Sketches">
+          <!-- <div class="painting" data-medium="Sketch" data-style="Indian Miniature" data-contemporary="Hand Painted Wall Art" data-price="150000">
             
-            <h4>Medium > Sketches</h4>
+            <div class="product-section">
+              
+              
+            </div>
+            
+          </div> -->
+          
+          <!-- -------------------------------------------------------------------------------------------------- -->
+
+          <div class="painting" data-medium="CHarcoleSketch" data-style="" data-contemporary="" data-price="150000">
+               
+            <div class="product-section">
+              <!-- ---------------------------- -->
+              <div class="product-card">
+                <div class="product-card-head">
+                    <span>October 23, 2022</span>
+                    <span>Charcoal</span>
+                </div>
+                <div class="product-img">
+                    <img src="./images/paintings/painting-18.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <h3>Eyes of the past</h3>
+                    <p>
+                      Charcoal portrait of an elderly man, embodying quiet dignity and resilience.
+                    </p>
+                    <a href="./our-products/eyes-of-past.html"><button>Explore</button></a>
+               </div>
+              </div>
+              <!-- ---------------------------- -->
+              <div class="product-card">
+                <div class="product-card-head">
+                    <span>January 12, 2023</span>
+                    <span>Charcoal</span>
+                </div>
+                <div class="product-img">
+                    <img src="./images/paintings/painting-19.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <h3>Anxiety </h3>
+                    <p>
+                      Sketch of a young woman with closed eyes, embodying quiet resilience amidst chaos.
+                    </p>
+                    <a href="./our-products/anxiety.html"><button>Explore</button></a>
+                </div>
+              </div>
+              <!-- ---------------------------- -->
+              <div class="product-card">
+                <div class="product-card-head">
+                    <span>October 23, 2022</span>
+                    <span>Charcoal</span>
+                </div>
+                <div class="product-img">
+                    <img src="./images/paintings/painting-1.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <h3>Inhabitants of the Island of Salsette</h3>
+                    <p>
+                      An intricate sketch of mendicants in Varanasi, capturing their traditional attire and ascetic life.
+                    </p>
+                    <a href="./our-products/inhabitants.html"><button>Explore</button></a>
+               </div>
+              </div>
+              <!-- ---------------------------- -->
+              <div class="product-card">
+                <div class="product-card-head">
+                    <span>January 12, 2023</span>
+                    <span>Charcoal</span>
+                </div>
+                <div class="product-img">
+                    <img src="./images/paintings/painting-11.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <h3>Religious Mendicants, Benares</h3>
+                    <p>
+                      A detailed sketch of three Salsette women in traditional attire resting in a rustic stone setting.
+                    </p>
+                    <a href="./our-products/mendicants.html"><button>Explore</button></a>
+                </div>
+              </div>
+
+            </div>
             
           </div>
-  
-          <!-- ---------------------------------------------- -->
-          
-          <!-- --- Style > Indian Miniature--- -->
-          <div class="painting" data-category="Indian Miniature">
+
+          <!-- -------------------------------------------------------------------------------------------------- -->
+                    
+          <div class="painting" data-medium="acrylic" data-style="" data-contemporary="" data-price="150000">
             
-            <h4>Style > Indian Miniature</h4>
+            <div class="product-section">
+              <div class="product-section">
+                <!-- ---------------------------- -->
+                <div class="product-card">
+                  <div class="product-card-head">
+                      <span>January 12, 2023</span>
+                      <span>Oil Pastel</span>
+                  </div>
+                  <div class="product-img">
+                      <img src="./images/paintings/painting-20.jpg" alt="">
+                  </div>
+                  <div class="product-details">
+                      <h3>Tiny dancer </h3>
+                      <p>
+                        A fluffy yellow chick in a playful yoga pose, balanced on one leg with wings outstretched.
+                      </p>
+                      <a href="./our-products/tiny-dancer.html"><button>Explore</button></a>
+                  </div>
+                </div>
+                <!-- ---------------------------- -->
+                <div class="product-card">
+                  <div class="product-card-head">
+                      <span>October 23, 2022</span>
+                      <span>Acrylic</span>
+                  </div>
+                  <div class="product-img">
+                      <img src="./images/paintings/painting-21.jpg" alt="">
+                  </div>
+                  <div class="product-details">
+                      <h3>Hand holding heart</h3>
+                      <p>
+                        A human heart cradled in abstract, warm-toned shapes resembling hands.
+                      </p>
+                      <a href="./our-products/hand-holding-heart.html"><button>Explore</button></a>
+                 </div>
+                </div>
+                <!-- ---------------------------- -->
+                <div class="product-card">
+                  <div class="product-card-head">
+                      <span>January 12, 2023</span>
+                      <span>Oil Pastel</span>
+                  </div>
+                  <div class="product-img">
+                      <img src="./images/paintings/painting-22.jpg" alt="">
+                  </div>
+                  <div class="product-details">
+                      <h3>Venice reborn</h3>
+                      <p>
+                        Painting of a serene Venetian scene framed by an archway of delicate pink blossoms.
+                      </p>
+                      <a href="./our-products/venice-reborn.html"><button>Explore</button></a>
+                  </div>
+                </div>
+  
+              </div>
+              
+            </div>
             
           </div>
-          
-          <!-- --- Style > Sketches --- -->
-          <div class="painting" data-category="Style Sketches">
-            
-            <h4>Style > Sketches</h4>
-            
-          </div>
-          
-          <!-- --- Style > Sketches --- -->
-          <div class="painting" data-category="Contemporary">
-            
-            <h4>Style > Contemporary</h4>
-            
-          </div>
-          
-          <!-- --- contemporary  > Hand Painted Wall Art  --- -->
-          <div class="painting" data-category="Hand Painted Wall Art">
-            
-            <h4>Contemporary > Hand Painted Wall Art</h4>
-            
-          </div>
-  
-          <!-- ---------------------------------------------- -->
-  
-  
-          <div class="paintings price-dropdown-content" id="paintings">
-            <!-- Sample paintings for demo with price data -->
-            <div class="painting" data-price="15000">Painting A - ₹15,000</div>
-            <div class="painting" data-price="25000">Painting B - ₹25,000</div>
-            <div class="painting" data-price="50000">Painting C - ₹50,000</div>
-            <div class="painting" data-price="75000">Painting D - ₹75,000</div>
-            <div class="painting" data-price="120000">Painting E - ₹1,20,000</div>
-            <div class="painting" data-price="160000">Painting F - ₹1,60,000</div>
-            <div class="painting" data-price="190000">Painting G - ₹1,90,000</div>
-          </div>
-  
-          
-          
-          <!-- <div class="painting" data-category="Sketches" data-style="Sketches" data-price="20000">Sketch</div>
-  
-          <div class="painting" data-category="Paintings" data-style="Hand Painted Wall Art" data-price="50000">Contemporary Wall Art</div> -->
-  
+
         </div>
+        
       </div>
 
       <!-- ------------------------------------ -->
@@ -347,30 +766,31 @@
     <script>
       AOS.init();
     </script>
-
-     <script>
-      function filterPaintings(category) {
-        const paintings = document.querySelectorAll('.painting');
-        paintings.forEach(painting => {
-          if (painting.getAttribute('data-category') === category || painting.getAttribute('data-style') === category) {
-            painting.style.display = 'block';
-          } else {
-            painting.style.display = 'none';
-          }
-        });
-      }
-
-      function filterByPrice(minPrice, maxPrice) {
-      const paintings = document.querySelectorAll('.painting');
-         paintings.forEach(painting => {
-           const price = parseInt(painting.getAttribute('data-price'), 10);
-           if (price >= minPrice && price <= maxPrice) {
-             painting.style.display = 'block';
-           } else {
-             painting.style.display = 'none';
-           }
-         });
-      }
+    <script>
+        function filterPaintings(category) {
+          const paintings = document.querySelectorAll('.painting');
+          paintings.forEach(painting => {
+              if (painting.getAttribute('data-medium') === category ||
+                  painting.getAttribute('data-style') === category ||
+                  painting.getAttribute('data-contemporary') === category) {
+                  painting.style.display = 'block';
+              } else {
+                  painting.style.display = 'none';
+              }
+          });
+        }
+        
+        function filterByPrice(minPrice, maxPrice) {
+          const paintings = document.querySelectorAll('.painting');
+          paintings.forEach(painting => {
+              const price = parseInt(painting.getAttribute('data-price'), 10);
+              if (price >= minPrice && price <= maxPrice) {
+                  painting.style.display = 'block';
+              } else {
+                  painting.style.display = 'none';
+              }
+          });
+        }
     </script>
   </body>
 </html>

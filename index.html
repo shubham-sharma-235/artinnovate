@@ -38,30 +38,42 @@
         <header>
           <!-- ------------------------------------ -->
   
-          <div class="navbar" data-aos="fade-down">
-            <div class="nav-left">
-              <img src="./images/artinnovate-logo-without-bg.png" alt="" />
+            <div class="navbar" data-aos="fade-down">
+              <div class="nav-left">
+                  <img src="./images/artinnovate-logo-without-bg.png" alt="Art Innovate Logo" />
+              </div>
+              <div class="nav-middle">
+                  <ul class="nav-links">
+                      <a class="active" href="./index.html"><li>Home</li></a>
+                      <a class="hover-underline-animation" href="./our-products.html"><li>Our Products</li></a>
+                      <a class="hover-underline-animation" href="./about-artinnovate.html"><li>About Us</li></a>
+                      <a class="hover-underline-animation" href="./contact-artinnovate.html"><li>Contact</li></a>
+                  </ul>
+              </div>
+              <div class="nav-right">
+                  <ul class="nav-links">
+                      <a href="https://artinnovate-beta.streamlit.app/" target="_blank">
+                          <li class="nav-btn">Price Predictor<i class="bx bxs-right-top-arrow-circle"></i></li>
+                      </a>
+                  </ul>
+              </div>
+              <div class="menu-icon" onclick="toggleMenu()">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+              </div>
             </div>
-            <div class="nav-middle">
-              <ul class="nav-links">
-                <a class="active" href="./index.html"><li>Home</li></a>
-  
-                <a class="hover-underline-animation" href="./our-products.html"><li>Our Products</li></a>
-  
-                <a class="hover-underline-animation" href="./about-artinnovate.html"><li>About Us</li></a>
-  
-                <a class="hover-underline-animation" href="./contact-artinnovate.html"><li>Contact</li></a>
-
-              </ul>
+        
+             <div class="sidebar" id="sidebar">
+                <ul class="sidebar-links">
+                    <li><a class="active" href="./index.html">Home</a></li>
+                    <li><a href="./our-products.html">Our Products</a></li>
+                    <li><a href="./about-artinnovate.html">About Us</a></li>
+                    <li><a href="./contact-artinnovate.html">Contact</a></li>
+                    <li><a href="https://artinnovate-beta.streamlit.app/" target="_blank">Price Predictor</a></li>
+                </ul>
+                <span class="close-btn" onclick="toggleMenu()">&times;</span>
             </div>
-            <div class="nav-right">
-              <ul class="nav-links">
-                <a href="https://artinnovate-beta.streamlit.app/" target="_blank"
-                  ><li class="nav-btn">Price Predictor<i class="bx bxs-right-top-arrow-circle"></i></li
-                ></a>
-              </ul>
-            </div>
-          </div>
           
         </header>
 
@@ -244,62 +256,10 @@
 
         <hr />
 
-        <!-- <div class="product-section">
-          <div class="product-outer-card">
-            <div class="product-card">
-              <img src="./images/product-demo-img.jpg" alt="" />
-            </div>
-
-            <div class="product-card-details">
-              <h2>Artwork Name</h2>
-              <p>Artist Name</p>
-              <p>34 X 34 Inches</p>
-              <button class="btn btn1">Buy Now</button>
-            </div>
-          </div>
-          <div class="product-outer-card">
-            <div class="product-card">
-              <img src="./images/product-demo-img-2.png" alt="" />
-            </div>
-
-            <div class="product-card-details">
-              <h2>Artwork Name</h2>
-              <p>Artist Name</p>
-              <p>34 X 34 Inches</p>
-              <button class="btn btn1">Buy Now</button>
-            </div>
-          </div>
-          <div class="product-outer-card">
-            <div class="product-card">
-              <img src="./images/product-demo-img-3.png" alt="" />
-            </div>
-
-            <div class="product-card-details">
-              <h2>Artwork Name</h2>
-              <p>Artist Name</p>
-              <p>34 X 34 Inches</p>
-              <button class="btn btn1">Buy Now</button>
-            </div>
-          </div>
-          <div class="product-outer-card">
-            <div class="product-card">
-              <img src="./images/product-demo-img-4.png" alt="" />
-            </div>
-
-            <div class="product-card-details">
-              <h2>Artwork Name</h2>
-              <p>Artist Name</p>
-              <p>34 X 34 Inches</p>
-              <button class="btn btn1">Buy Now</button>
-            </div>
-          </div>
-        </div> -->
-
         <div class="product-section">
 
               <div class="product-card"
                   data-aos="fade-up"
-                  data-aos-offset="100"
                   data-aos-delay="20"
                   data-aos-duration="400"
                 >
@@ -321,7 +281,6 @@
               
               <div class="product-card"
                   data-aos="fade-up"
-                  data-aos-offset="150"
                   data-aos-delay="40"
                   data-aos-duration="800"
                 >
@@ -345,7 +304,6 @@
 
               <div class="product-card"
                   data-aos="fade-up"
-                  data-aos-offset="200"
                   data-aos-delay="60"
                   data-aos-duration="1000"
                 >
@@ -371,7 +329,6 @@
 
               <div class="product-card"
                   data-aos="fade-up"
-                  data-aos-offset="250"
                   data-aos-delay="80"
                   data-aos-duration="1200"
                 >
@@ -434,7 +391,7 @@
            
            <div>
              <a href="./our-products.html">
-              <button class="btn btn1" style="background-color: rgba(250, 235, 215, 0.418);margin-left: 2rem;">View All Catagories</button>
+              <button class="btn btn1 view-all-cat-btn" style="background-color: rgba(250, 235, 215, 0.418);margin-left: 2rem;">View All Catagories</button>
              </a>
            </div>
        </div>
@@ -447,7 +404,6 @@
 
             <div class="product-card"
                 data-aos="fade-up"
-                data-aos-offset="100"
                 data-aos-delay="20"
                 data-aos-duration="400"
               >
@@ -474,7 +430,6 @@
               
               <div class="product-card"
                   data-aos="fade-up"
-                  data-aos-offset="150"
                   data-aos-delay="40"
                   data-aos-duration="800"
                 >
@@ -498,7 +453,6 @@
 
               <div class="product-card"
                   data-aos="fade-up"
-                  data-aos-offset="200"
                   data-aos-delay="60"
                   data-aos-duration="1000"
                 >
@@ -521,7 +475,6 @@
 
               <div class="product-card"
                   data-aos="fade-up"
-                  data-aos-offset="250"
                   data-aos-delay="90"
                   data-aos-duration="1200"
                 >
@@ -742,7 +695,7 @@
 
       <!-- ------------------------------------ -->
 
-      <div class="featured-catagory featured-section artist-section">
+      <!-- <div class="featured-catagory featured-section artist-section">
         <div class="heading-style-one" data-aos="zoom">
           <h2>Featured Artists.</h2>
           <p>Celebrating the Visionaries Behind the Art.</p>
@@ -817,7 +770,7 @@
           </div>
         </div>
 
-      </div>
+      </div> -->
       <!-- ------------------------------------ -->
 
       <div class="featured-catagory featured-section numbers-section">

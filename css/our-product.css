@@ -54,10 +54,36 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .painting {
   padding: 10px;
   border: 1px solid #ddd;
   background-color: #f9f9f9;
-  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .dropbtn {
+      width: 100%; /* Full width on smaller screens */
+      margin-bottom: 10px; /* Add space between buttons */
+  }
+
+  .top-bar {
+      flex-direction: column; /* Stack buttons vertically */
+  }
+}
+
+@media (max-width: 480px) {
+  .dropbtn {
+      padding: 8px; /* Adjust padding for smaller screens */
+      font-size: 14px; /* Smaller font size */
+  }
+
+  .top-bar {
+      margin: 0.5rem; /* Reduce margin on very small screens */
+  }
 }
