@@ -1639,7 +1639,7 @@ footer{
     font-size: 4.2vw;
   }
   .product-card{
-    height: 125vw;
+    height: 100%;
     width: 100%;
   }
 
@@ -1697,11 +1697,12 @@ footer{
   .price-predictor-card-right img {
     height: 65vw;
     margin-top: 1rem;
-    margin-bottom: -6px;
+    margin-bottom: 0px;
   }
   .price-predictor-card-left {
     background-color: #fff;
   }
+
 
   .number-card-container {
     display: grid;

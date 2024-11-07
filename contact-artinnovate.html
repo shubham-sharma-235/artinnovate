@@ -216,6 +216,9 @@
             margin: 20px auto;
             width: 95%;
           }
+          .contact-container {
+            background-size: 430%;
+          }
         }
         
         @media screen and (max-width: 480px) {
@@ -348,7 +351,9 @@
                 <h1>&bull; Get in Touch &bull;</h1>
                 <div class="underline">
                 </div>
-                <form action="#" method="post" id="contact_form">
+                <form  action="https://api.web3forms.com/submit" method="POST" method="post" id="contact_form">
+                  <input type="hidden" name="access_key" value="26d5d005-73ff-4002-b9d3-bb34bc6f17fb">
+
                   <div class="name">
                     <label for="name"></label>
                     <input type="text" placeholder="My name is" name="name" id="name_input" required>
@@ -375,7 +380,8 @@
                     <textarea name="message" placeholder="I'd like to chat about" id="message_input" cols="30" rows="5" required></textarea>
                   </div>
                   <div class="submit">
-                    <input type="submit" value="Send Message" id="form_button" />
+                    <!-- <input type="submit" value="Send Message" id="form_button" /> -->
+                    <button type="submit" id="form_button" >Submit Form</button>
                   </div>
                 </form>
               </div>    
@@ -397,7 +403,7 @@
             <a href="https://www.instagram.com/art_innovate/" target="_blank">
                 <i class='bx bxl-instagram-alt' ></i> Instagram
             </a>
-            <a href="mailto:artinnovate2024@gmail.com" target="_blank">
+            <a href="mailto:artinnovate2023@gmail.com" target="_blank">
                 <i class='bx bxs-envelope' ></i> Email Us
             </a>
         </div>
@@ -415,10 +421,10 @@
                 <img src="./images/artinnovate-logo-without-bg.png" alt="">
               </div>
               <a href="./index.html" class="footer-site-logo">Art Innovate</a>
-              <p>
+              <!-- <p>
                 ArtInnovate: Unlocking the Future of <br>
                  Art Investment with AI-Powered Insights
-               </p>
+               </p> -->
             </div>
             <div class="col-md-2 ml-auto">
               <h3>Important Links</h3>
@@ -460,7 +466,7 @@
               <div class="col-md-6 text-md-right">
                 <ul class="list-unstyled social nav-right">
                   <li><a href="https://www.instagram.com/art_innovate/"><i class='bx bxl-instagram'></i></a></li>
-                  <li><a href="mailto:artinnovate2024@gmail.com"><i class='bx bxs-envelope'></i></i></a></li>
+                  <li><a href="mailto:artinnovate2023@gmail.com"><i class='bx bxs-envelope'></i></i></a></li>
                 </ul>
               </div>
              </div>
