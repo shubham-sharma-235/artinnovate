@@ -1511,7 +1511,7 @@ footer{
   /* ---------------------- */
   .slider {
     width: 92%;
-    height: 70vh;
+    height: 80vh;
   }
   .slide {
     flex-direction: column;
